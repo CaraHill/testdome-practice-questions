@@ -13,4 +13,4 @@
 --   sellerId INTEGER REFERENCES sellers(id)
 -- Write a query that selects the item name and the name of its seller for each item that belongs to a seller with a rating greater than 4. The query should return the name of the item as the first column and name of the seller as the second column.
 
-SELECT items.name, sellers.name FROM items INNER JOIN sellers on items.sellerId=sellers.id WHERE sellers.rating > 4;
+SELECT items.name, sellers.name FROM items JOIN sellers ON items.sellerId=sellers.id WHERE sellers.rating > 4;
