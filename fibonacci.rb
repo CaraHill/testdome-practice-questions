@@ -11,6 +11,12 @@ class Fibonacci
   end
 
   def recursive_fib(num)
+    return num if num < 2
+
+    recursive_fib(num - 1) + recursive_fib(num - 2)
+  end
+
+  def recursive_fib_with_cache(num)
     return @cached_array[num] if @cached_array[num]
 
     @cached_array[num] = recursive_fib(num - 1) + recursive_fib(num - 2)
